@@ -1,0 +1,19 @@
+{
+  "name": "mmdb-backend",
+  "description": "Backend in NodeJS per i client MMDB (Mohole Movie Database) - applicazione didattica.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://moebiusmania@github.com/mohole/mmdb-backend.git",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "hapi": "^16.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
