@@ -36,12 +36,11 @@ server.route({
     method: 'GET',
     path:'/movies',
     handler: (request, reply) => {
-      movies.find((err, data) => {
-        console.log(err,data);
-      })
+      console.log(movies.find().toArray());
+      const _movies = movies.find().toArray()
       // console.log(Mongoose.find());
       // const db = request.mongo.db;
-      return reply('ok');
+      return reply(_movies);
     }
 });
 

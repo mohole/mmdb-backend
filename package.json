@@ -13,7 +13,6 @@
   "dependencies": {
     "boom": "^4.2.0",
     "hapi": "^16.1.0",
-    "hapi-mongodb": "^6.2.0",
     "mongoose": "^4.7.8"
   },
   "devDependencies": {
