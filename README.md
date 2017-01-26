@@ -15,7 +15,7 @@ Backend in NodeJS per i client MMDB (Mohole Movie Database) - applicazione didat
 * Clonare questo repository sul proprio PC
 * Aprire il terminale (Mac OS/Linux) o il prompt dei comandi (Windows)
 * Spostarsi nell cartella principale del repo scaricato
-* Installare le dipendenze con il comando ```npm install && bower install```.
+* Installare le dipendenze con il comando ```npm install```.
 * Utilizzare il comando ```npm start``` per avviare il webserver
 
 ### 3. Licenza
