@@ -4,6 +4,7 @@ const Hapi = require('hapi');
 const Boom = require("boom");
 const Mongoose = require('mongoose');
 const handlers = require('./src/handlers.js');
+const ObjectId = require('mongodb').ObjectId;
 
 const config = {
   mongo: {
@@ -37,10 +38,18 @@ server.route({
     path:'/movies',
     handler: (request, reply) => {
       console.log(movies.find().toArray());
-      const _movies = movies.find().toArray()
-      // console.log(Mongoose.find());
-      // const db = request.mongo.db;
+      const _movies = movies.find().toArray();
       return reply(_movies);
+    }
+});
+
+server.route({
+    method: 'GET',
+    path:'/movie/{id}',
+    handler: (request, reply) => {
+      const id = request.params.id
+      const _movie = movies.findOne(ObjectId(id));
+      return reply(_movie);
     }
 });
 
