@@ -59,7 +59,7 @@ server.route({
     method: 'GET',
     path:'/movie/{id}',
     handler: (request, reply) => {
-      const id = request.params.id
+      const id = request.params.id;
       const _movie = movies.findOne(ObjectId(id));
       return reply(_movie);
     }
@@ -69,8 +69,20 @@ server.route({
     method: 'DELETE',
     path:'/movie/{id}',
     handler: (request, reply) => {
-      const id = request.params.id
+      const id = request.params.id;
       const _movie = movies.deleteOne({ "_id": ObjectId(id) });
+      return reply(_movie);
+    }
+});
+
+server.route({
+    method: 'PUT',
+    path:'/movie/{id}',
+    handler: (request, reply) => {
+      const id = request.params.id;
+      const obj = Object.assign({}, request.payload);
+      delete obj._id;
+      const _movie = movies.replaceOne({ "_id": ObjectId(id) }, obj);
       return reply(_movie);
     }
 });
