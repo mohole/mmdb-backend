@@ -44,11 +44,33 @@ server.route({
 });
 
 server.route({
+    method: 'POST',
+    path:'/movies',
+    handler: (request, reply) => {
+      console.log(request.payload);
+      const obj = request.payload;
+      const id = movies.insertOne(obj);
+      return reply(id);
+      // return reply(request.payload);
+    }
+});
+
+server.route({
     method: 'GET',
     path:'/movie/{id}',
     handler: (request, reply) => {
       const id = request.params.id
       const _movie = movies.findOne(ObjectId(id));
+      return reply(_movie);
+    }
+});
+
+server.route({
+    method: 'DELETE',
+    path:'/movie/{id}',
+    handler: (request, reply) => {
+      const id = request.params.id
+      const _movie = movies.deleteOne({ "_id": ObjectId(id) });
       return reply(_movie);
     }
 });
