@@ -1,9 +1,9 @@
 'use strict';
 
 const Hapi = require('hapi');
-const Boom = require("boom");
+const Boom = require('boom');
 const Mongoose = require('mongoose');
-const handlers = require('./src/handlers.js');
+// const handlers = require('./src/handlers.js');
 const ObjectId = require('mongodb').ObjectId;
 
 const config = {
@@ -23,7 +23,7 @@ const movies = Mongoose.connection.db.collection('movies');
 const server = new Hapi.Server();
 
 server.connection({
-    host: 'localhost',
+    // host: 'localhost',
     port: process.env.PORT || 8000
 });
 
@@ -51,7 +51,6 @@ server.route({
       const obj = request.payload;
       const id = movies.insertOne(obj);
       return reply(id);
-      // return reply(request.payload);
     }
 });
 
