@@ -20,7 +20,13 @@ const config = {
 Mongoose.connect(config.mongo.url);
 const movies = Mongoose.connection.db.collection('movies');
 
-const server = new Hapi.Server();
+const server = new Hapi.Server({
+  connections: {
+    routes: {
+      cors: true
+    }
+  }
+});
 
 server.connection({
     host: process.env.HOST || 'localhost',
