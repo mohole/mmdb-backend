@@ -1,21 +1,15 @@
 {
   "name": "mmdb-backend",
-  "description": "Backend in NodeJS per i client MMDB (Mohole Movie Database) - applicazione didattica.",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://moebiusmania@github.com/mohole/mmdb-backend.git",
-  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
+  "description": "Fake REST API backend for the academic project \"Mohole Movie Database\".",
+  "version": "2.0.0",
+  "main": "db.json",
+  "repository": "git@github.com:mohole/mmdb-backend.git",
+  "author": "Salvatore Laisa <salvatore.laisa@mohole.it>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./index.js",
-    "dev": "nodemon ./index.js"
+    "start": "json-server --watch db.json --port 3004"
   },
   "dependencies": {
-    "boom": "^4.2.0",
-    "hapi": "^16.1.0",
-    "mongoose": "^4.7.8"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
+    "json-server": "0.16.3"
   }
 }

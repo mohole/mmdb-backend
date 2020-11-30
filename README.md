@@ -1,27 +1,18 @@
 # mmdb-backend
+Fake REST API backend for the academic project "Mohole Movie Database".
 
-Backend in NodeJS per i client MMDB (Mohole Movie Database) - applicazione didattica.
+### 0. Requirements
+A [NodeJS](https://nodejs.org/en/) version from 12 to current most recent active should be fine.
 
-### 0. Software necessario
-* [Google Chrome](https://www.google.it/chrome/browser/desktop/)
-* [Git](https://git-scm.com/)
-* [NodeJS](https://nodejs.org/en/)
-* Editor di codice ([Atom](https://atom.io/) è una valida opzione!)
+### 2. Install & how to use
+* Clone this repo and `cd` on the folder
+* Install dependencies with `npm install`.
+* Start the mock server with ```npm start``` and open the browser to `localhost:3004/movies` to get see the data
 
-### 1. Prerequisiti
-* Corso [Modern JS 02](https://github.com/mohole/modern-js-02).
-
-### 2. Installazione
-* Clonare questo repository sul proprio PC
-* Aprire il terminale (Mac OS/Linux) o il prompt dei comandi (Windows)
-* Spostarsi nell cartella principale del repo scaricato
-* Installare le dipendenze con il comando ```npm install```.
-* Utilizzare il comando ```npm start``` per avviare il webserver
-
-### 3. Licenza
+### 3. License
 MIT License
 
-Copyright (c) 2017 Mohole Snc
+Copyright (c) 2020 Mohole Snc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
