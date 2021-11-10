@@ -10,6 +10,6 @@
     "start": "json-server --watch db.json --port 3004"
   },
   "dependencies": {
-    "json-server": "0.16.3"
+    "json-server": "0.17.0"
   }
 }
